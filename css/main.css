@@ -1,5 +1,25 @@
 * {
 	color: grey;
+	font-family: 'Lato', sans-serif;
+}
+
+.navbar-default {
+	background-color: wheat;
+	margin-bottom: 0;
+}
+
+.screen {
+	position: relative;
+}
+
+.ontext {
+	position: absolute;
+	top: 200px;
+	left: 50px;
+}
+
+.ontext h3 {
+	margin-top: 10px;
 }
 
 .btn {
@@ -91,6 +111,7 @@ h1,h2,h3 {
 .container1 h3 {
 	font-size: 16px;
 	text-transform: capitalize;
+	font-weight: bold;
 }
 
 .container1 p {
@@ -248,4 +269,9 @@ i {
 	position: relative;
 	top: 0;
 	right: 0;
+}
+
+.diff {
+	text-transform: none;
+	font-size: 80px;
 }

@@ -3,14 +3,15 @@
 <head>
 	<title>iM FILING</title>
 	
-	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
+	<link rel="stylesheet" type="text/css" href="css/Bootstrap.min.css">	
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/card.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 	<link rel="icon" type="img/png" href="img/logo.png">
 </head>
 <body>
 	<!-- navbar -->
-	<nav class="navbar navbar-default navbar-fixed-top">
+	<nav class="navbar navbar-default">
 	  <div class="container">
 	    <div class="navbar-header">
 	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -18,7 +19,7 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="#"><span class="im"><i class="glyphicon glyphicon-folder-open li"></i>iM</span>-Filing <small>Making filing an easy process for the honorable lawyers</small></a>
+	      <a class="navbar-brand" href="#"><span class="im"><i class="glyphicon glyphicon-folder-open li"></i>iM</span>-Filing <small>Making filing an easy process</small></a>
 	    </div>
 	    <div class="collapse navbar-collapse" id="myNavbar">
 	      <ul class="nav navbar-nav navbar-right">
@@ -31,70 +32,16 @@
 	  </div>
 	</nav>
 
-	<!-- split accordion -->
+	<section class="container-fluid">
+		<img src="img/inside.jpg" class="img-responsive screen">
 
-	 <div class="carousel slide" id="screenshot-carousel" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#screenshot-carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#screenshot-carousel" data-slide-to="1"></li>
-                    <li data-target="#screenshot-carousel" data-slide-to="2"></li>
-                    <li data-target="#screenshot-carousel" data-slide-to="3"></li>
-                    <li data-target="#screenshot-carousel" data-slide-to="4"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <img src="img/outside.jpg" alt="Text of the image" width="100%">
-                        <div class="carousel-caption">
-                            <h3>Highway heading</h3>
-                            <p>This is the caption</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="img/inner.jpg" alt="Text of the image" width="100%">
-                        <div class="carousel-caption">
-                            <h3>River heading</h3>
-                            <p>This is the caption</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="img/outside.jpg" width="100%" alt="Text of the image">
-                        <div class="carousel-caption">
-                            <h3>Street heading</h3>
-                            <p>This is the caption</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="img/inside.jpg" alt="Text of the image" width="100%">
-                        <div class="carousel-caption">
-                            <h3>Painting heading</h3>
-                            <p>This is the caption</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <img src="img/lawyer.jpg" alt="Text of the image" width="100%">
-                        <div class="carousel-caption">
-                            <h3>Painting heading</h3>
-                            <p>This is the caption</p>
-                        </div>
-                    </div>
-
-                </div><!-- End Carousel inner -->
-
-
-                <a href="#screenshot-carousel" class="left carousel-control" data-slide="prev">
-                    <button type="button" class="btn btn-inverse btn-sm">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                    </button>
-                </a>
-
-                <a href="#screenshot-carousel" class="right carousel-control" data-slide="next">
-                    <button type="button" class="btn btn-inverse btn-sm">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                    </button>
-                </a>
-            </div><!-- End Carousel -->
-
+		<div class="ontext">
+			<span class="diff">iM-Filing</span> <h3>where clients and laywyers meet</h3>
+			<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#login1">sign in as a lawyer</button>
+			<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#login">sign in as a client</button>
+		</div>
+	</section>
+	 
 <!-- Modal -->
 <div id="myModal1" class="modal fade" role="dialog">
   <div class="modal-dialog">
@@ -251,12 +198,83 @@
   </div>
 </div>
 
+<div id="login" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title text-center">Log in as a client</h4>
+      </div>
+      <div class="modal-body">
+         <form class="form-horizontal" action="/action_page.php">
+					  <div class="form-group">
+					    <label class="control-label col-sm-3" for="email">Email:</label>
+					    <div class="col-sm-9">
+					      <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label class="control-label col-sm-3" for="pwd">Password:</label>
+					    <div class="col-sm-9">
+					      <input type="password" class="form-control" id="pwd" placeholder="Enter password" required>
+					    </div>
+					  </div>
+
+					      <button type="submit" class="btn btn-warning">Log in</button>
+					    </div>
+					  </div>
+				</form>
+      </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="login1" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title text-center">Log in as a lawyer</h4>
+      </div>
+      <div class="modal-body">
+         <form class="form-horizontal" action="/action_page.php">
+					  <div class="form-group">
+					    <label class="control-label col-sm-3" for="email">Email:</label>
+					    <div class="col-sm-9">
+					      <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label class="control-label col-sm-3" for="pwd">Password:</label>
+					    <div class="col-sm-9">
+					      <input type="password" class="form-control" id="pwd" placeholder="Enter password" required>
+					    </div>
+					  </div>
+
+					      <button type="submit" class="btn btn-warning">Log in</button>
+					    </div>
+					  </div>
+				</form>
+      </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
 
 <section class="container top down">
 	<div class="col-lg-7">
-		<h1 class="text-danger">automatically file <span style="color: black">DIRECTLY</span> to the courts</h1>
-		<p style="line-height: 25px;">Our goal with iM-filing is to save your team countless hours of manually submitting documents to the Nigerian courts in civil court cases. if you spend more than one-hour per day filing ALL pleadings at your firm, then you are wasting precious time.</p>
-		<p style="line-height: 25px;">iM-Filing is a product of Team impact that is not affilated with any law firm. We are a Nigeria ePortal Certified Third Party Vendor and specialize in automating the filing of court documents on existing cases with little to no human intervention.</p>
+		<h1 class="text-danger">file documents <span style="color: black">DIRECTLY</span> to the courts</h1>
+		<p style="line-height: 25px;">Our goal with iM-filing is to save lawyers the stress and time involved in submitting documents for civil processes manually to the Nigerian courts.</p>
+		<p style="line-height: 25px;">iM-Filing is a product of Team impact, not affilated with any law firm. We are an online Nigerian Certified Third Party Vendor and specialize in automating the filing of court processes.</p>
 
 		<button class="btn btn-danger">request more information</button>
 	</div>
@@ -275,6 +293,21 @@
 		
 	</div>
 	
+</section>
+
+<section class="container top down">
+	<div class="col-lg-5 col-sm-12">
+		<div class="tab text-center shadow txt1" style="width:200px"><i class="glyphicon glyphicon-user"></i><span class="txt ">file efficiently</span></div>
+		
+	</div>
+
+	<div class="col-lg-7">
+		<h1 class="text-danger">Access a lawyer or law firm around you</h1>
+		<p style="line-height: 25px;">Our goal with iM-filing is to save lawyers the stress and time involved in submitting documents for civil processes manually to the Nigerian courts.</p>
+		<p style="line-height: 25px;">iM-Filing is a product of Team impact, not affilated with any law firm. We are an online Nigerian Certified Third Party Vendor and specialize in automating the filing of court processes.</p>
+
+		<button class="btn btn-danger">request more information</button>
+	</div>	
 </section>
 
 <section class="container top down">
@@ -457,20 +490,12 @@
 	<div class="col-lg-4">
 		<h2>resources</h2>
 
-		<a href="#">lorem dvhf hujjenjf</a><br><br>
-		<a href="#">lorem dvhf hujjenjf</a><br><br>
-		<a href="#">lorem dvhf hujjenjf</a><br><br>
-		<a href="#">lorem dvhf hujjenjf</a><br><br>
-		<a href="#">lorem dvhf hujjenjf</a><br><br>
+		<a href="#">efiling Basics</a><br><br>
+		<a href="#">Why was my eFiled paperwork rejected?</a><br><br>
 
 		<h2>from the blog</h2>
 
-		<a href="#">lorem dvhf hujjenjf</a><br><br>
-		<a href="#">lorem dvhf hujjenjf</a><br><br>
-		<a href="#">lorem dvhf hujjenjf</a><br><br>
-		<a href="#">lorem dvhf hujjenjf</a><br><br>
-		<a href="#">lorem dvhf hujjenjf</a><br><br>
-		<a href="#">lorem dvhf hujjenjf</a><br><br>
+		<a href="#">Loading...</a><br><br>
 	</div>
 	
 </section>
@@ -547,7 +572,7 @@
 	</footer>
 	
 	<script type="text/javascript" src="jquery/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/Bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
